@@ -1,0 +1,186 @@
+body,
+html,
+.root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body .header,
+html .header,
+.root .header {
+  width: 100%;
+  height: 20%;
+  background-color: yellow;
+}
+
+body .header nav,
+html .header nav,
+.root .header nav {
+  background-color: #4c5c68;
+  width: 84%;
+  margin: auto;
+  height: 150px;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .header .logo,
+html .header .logo,
+.root .header .logo {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+body .header nav ul li,
+html .header nav ul li,
+.root .header nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+body .header nav ul li a,
+html .header nav ul li a,
+.root .header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-family: inherit;
+}
+
+body .header nav ul li a:hover,
+html .header nav ul li a:hover,
+.root .header nav ul li a:hover {
+  color: #a8c1e1;
+}
+
+body .header .name,
+html .header .name,
+.root .header .name {
+  margin-right: 38%;
+  font-size: 50px;
+  color: #a8c1e1;
+  font-family: inherit;
+}
+
+body .header li button,
+html .header li button,
+.root .header li button {
+  border-radius: 32px;
+  width: 160px;
+  background-color: lightblue;
+  color: white;
+}
+
+body .content,
+html .content,
+.root .content {
+  width: 100%;
+  height: 70%;
+}
+
+body .content .feature,
+html .content .feature,
+.root .content .feature {
+  background-color: green;
+  margin-top: 3%;
+  margin-left: 40%;
+  margin-bottom: 1%;
+  height: 60px;
+  width: 290px;
+  border-radius: 25px;
+}
+
+body .content .feature h3,
+html .content .feature h3,
+.root .content .feature h3 {
+  margin-top: 2%;
+  padding-top: 10px;
+  text-align: center;
+}
+
+body .content .feat,
+html .content .feat,
+.root .content .feat {
+  margin-left: 15%;
+  background-color: #4c5c68;
+  height: 55%;
+  width: 70%;
+  display: inline-block;
+  margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .content .feat .grid-container,
+html .content .feat .grid-container,
+.root .content .feat .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  height: 100%;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+body .content .feat .img,
+html .content .feat .img,
+.root .content .feat .img {
+  height: 200px;
+  width: 200px;
+}
+
+body .content .feat .card,
+html .content .feat .card,
+.root .content .feat .card {
+  background-color: #a8c1e1;
+  margin-right: 20px;
+}
+
+body .content .feat .card p,
+html .content .feat .card p,
+.root .content .feat .card p {
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+body .footer,
+html .footer,
+.root .footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background-color: #4c5c68;
+  color: #a8c1e1;
+  text-align: start;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hero {
+  background: #343a40;
+  height: 80px;
+  width: 100%;
+  font-family: sans-serif;
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */

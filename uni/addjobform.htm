@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Add Job Offer</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Add job Offering</h2>
+        <div class="row">
+            <div class="col-md-6">
+                
+                <?php
+
+                if (isset($_GET['user_id'])){
+
+                require 'dbconnect.php';
+                $id = $_GET['user_id'];
+                $query = "SELECT * FROM jobs WHERE user_id=$id";
+
+                $result = mysqli_query($conn, $query);
+                $row = mysqli_fetch_array($result);
+
+                else{
+                    header("location:index.php");
+                }
+                
+                ?>
+
+
+                <form action="addjob.php" method="get">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Company name</label>
+                        <input required type="text" name="company_name" class="form-control" placeholder="Enter Company name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select name="category_id" class="form-control" required>
+                            <option value="">Select Category</option>
+                            <option value="1">Information Technology</option>
+                            <option value="2">Computer Science</option>
+                            <option value="3">Accounting</option>
+                            <option value="4">Medicine</option>
+                            <option value="5">Engineering</option>
+                            <option value="6">Goverment</option>
+
+
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Job Title</label>
+                        <input required type="text" name="job_title" class="form-control" placeholder="Enter Job Title">
+                    </div>
+                    <div class="form-group">
+                        <label>Shift-Time</label>
+                        <input required type="text" name="shift_time" class="form-control" placeholder="Enter Job Title">
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input required type="text" name="city" class="form-control" placeholder="Enter City">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <input required type="text" name="description" class="form-control" placeholder="Enter Job Description">
+                    </div>
+                    <div class="form-group">
+                        <label>Salary</label>
+                        <input required type="text" name="salary" class="form-control" placeholder="Enter Salary">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Featured Or Not</label>
+                        <br>
+                        <label>Yes</label>
+                        <input type="radio" name="featured" value="1" class="form-control">
+                        <label>No</label>
+                        <input type="radio" name="featured" value="0" class="form-control">
+                    </div>
+
+
+
+
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
